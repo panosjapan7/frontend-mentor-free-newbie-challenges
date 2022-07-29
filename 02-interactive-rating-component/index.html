@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./assets/index.css" />
+  <script src="./index.js"></script>
+</head>
+<body>
+  <main>
+    <!-- card div containing everything -->
+    <div class="card">
+      
+      <div class="parentContainer" id="parentContainer">
+
+          <div class="starIconContainer">
+            <img src="./images/icon-star.svg" alt="star icone"/>
+          </div>
+          
+            <h1>How did we do?</h1>
+
+            <p class="copy">Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!
+            </p>
+            
+            <form class="numbersContainer" method="post">
+                <label for="num1">
+                    <input 
+                          type="radio"
+                          id="num1"
+                          name="rating"
+                          value="1"
+                          onclick=postToController()
+                      />
+                    1
+                  </label>
+                  <label for="num2">
+                    <input 
+                          type="radio"
+                          id="num2"
+                          name="rating"
+                          value="2"
+                          onclick=postToController()
+                      />
+                    2
+                  </label>
+                  <label for="num3">
+                    <input 
+                          type="radio"
+                          id="num3"
+                          name="rating"
+                          value="3"
+                          onclick=postToController()
+                      />
+                    3
+                  </label>
+                  <label for="num4">
+                    <input 
+                          type="radio"
+                          id="num4"
+                          name="rating"
+                          value="4"
+                          onclick=postToController()
+                      />
+                    4
+                  </label>
+                  <label for="num5">
+                    <input 
+                          type="radio"
+                          id="num5"
+                          name="rating"
+                          value="5"
+                          onclick=postToController()
+                      />
+                    5
+                  </label>  
+            </form>
+                
+            <button class="submitButton" onclick=onSubmit()>Submit</button>
+            
+      </div>
+      <!-- End of parentContainer -->
+          
+      <!-- Thank you state start -->
+      <div class="thankYouContainer" id="thankYouContainer">
+        
+        <div class="thankYouImageContainer">
+          <img src="./images/illustration-thank-you.svg" alt="Thank You image">
+        </div>
+        <div class="selectionMessage">
+          You selected <span id="selectedRating"></span> out of 5
+        </div>
+      
+        <h1>Thank you!</h2>
+        
+          <p class="thankYouCopy">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+      </div>
+
+      <!-- Thank you state end -->
+
+      </div>
+    <!-- End of card div containing everything -->
+
+</main>
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+    Coded by <a href="https://www.frontendmentor.io/profile/panosjapan7" target="_blank">Panos</a>
+  </div>
+</footer>
+</body>
+</html>

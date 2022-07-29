@@ -1,0 +1,210 @@
+body {
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+    
+    /* properties below center all items inside body */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .card {
+        width: 360px;
+        height: 360px;
+        border-radius: 25px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        background-color: hsl(213, 19%, 18%);
+
+    }
+        .parentContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+            .starIconContainer {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: hsl(212, 16%, 21%);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                margin-top: 30px;
+            }
+                .starIconContainer img {
+                    width: 15px;
+                    height: auto;
+                }
+            h1 {
+                color: hsl(0, 0%, 100%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 500;
+                font-size: 1.5em;
+                letter-spacing: 0.02em;
+
+                margin-top: 30px;
+                margin-bottom: 0px;
+            }
+            
+            .copy {
+                color: hsl(217, 12%, 63%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 500;
+                font-size: 13px;
+                letter-spacing: 0.03em;
+            }
+            
+            label {
+                color: hsl(217, 12%, 63%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 500;
+                font-size: 1em;
+
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+                    
+                display: flex;
+                /* justify-content: center; */ /* doesn't work, because the radio (which is invisble), takes up space */
+                align-items: center;
+                    
+                margin-top: 10px;
+                background-color: hsl(214, 19%, 22%);
+            }
+            input {
+                margin-right: 0px;
+                margin-left: 4px;
+            }
+            [type='radio'] {
+                opacity: 0;
+            }
+            .selectedNumber {
+                color: white;
+                background-color: hsl(217, 12%, 63%);
+            }
+
+            .numbersContainer {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+                .numberContainer {
+                    color: hsl(217, 12%, 63%);
+                    font-family: 'Overpass', sans-serif;  
+                    font-weight: 500;
+                    font-size: 1em;
+                    
+                    width: 43px;
+                    height: 43px;
+                    border-radius: 50%;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    margin-top: 10px;
+                    background-color: hsl(214, 19%, 22%);
+                }
+                label:hover {
+                    background-color: hsl(25, 97%, 53%);
+                    color: hsl(0, 0%, 100%);
+                    cursor: pointer;
+                }
+                .numberContainer:hover {
+                    background-color: hsl(25, 97%, 53%);
+                    color: hsl(0, 0%, 100%);
+                    cursor: pointer;
+                }
+            .submitButton {
+                all: unset;
+                background-color: hsl(25, 97%, 53%);
+                width: 100%;
+                height: 40px;
+                border-radius: 20px;
+
+                margin-top: 30px;
+                text-align: center;
+
+                color: hsl(0, 0%, 100%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 700;
+                font-size: 0.8em;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+            }
+            .submitButton:hover {
+                background-color: hsl(0, 0%, 100%);
+                color: hsl(25, 97%, 53%);
+                cursor: pointer;
+            }
+        
+        .thankYouContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 24px;
+            margin-right: 20px;
+            
+            display: none;
+        }
+            .thankYouImageContainer {
+                margin-top: 40px;
+            }
+            .selectionMessage {
+                margin-top: 20px;
+                padding-top: 3px;
+                background-color: hsl(214, 19%, 22%);
+                width: 170px;
+                height: 27px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-family: 'Overpass', sans-serif;  
+                color: hsl(25, 97%, 53%);
+                font-weight: 500;
+                font-size: 0.7em;
+                letter-spacing: 0.1em;
+            }   
+                #selectedRating {
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
+            .thankYouCopy {
+                color: hsl(217, 12%, 63%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 500;
+                font-size: 13px;
+                letter-spacing: 0.03em;
+                text-align: center;
+            }
+    
+   /* Footer  */
+    .attribution {
+        margin-top: 40px;
+        color: white;
+        font-size: 0.8em;
+        word-spacing: 0.1em;
+    }
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .card {
+        width: 330px;
+        height: 380px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
